@@ -3,525 +3,411 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101010">
-<meta name="description" content="Senga Comedy and Entertainment — Brand Development, Digital Transformation and Commercial Partnership Proposal by AAMush Technologies Tanzania.">
-<title>SENGA | Brand Development Proposal</title>
-
+<meta name="theme-color" content="#111111">
+<title>SENGA | Digital Brand Command Centre</title>
 <style>
-:root {
-  --black:#101010;
-  --dark:#191919;
-  --gold:#d4af37;
-  --cream:#f5f0e5;
-  --green:#17845b;
-  --muted:#b8b8b8;
+:root{
+ --bg:#101114;--panel:#191b20;--panel2:#22252b;
+ --gold:#D4AF37;--white:#F8F7F2;--muted:#A9ABB1;
+ --line:#373A40;--green:#15966B;
 }
-* {box-sizing:border-box;scroll-behavior:smooth}
-body {
-  margin:0;
-  background:var(--black);
-  color:var(--cream);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.65;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;background:var(--bg);color:var(--white);
+ font-family:Arial,Helvetica,sans-serif;
 }
-header {
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:rgba(16,16,16,.96);
-  border-bottom:1px solid #393939;
-  padding:12px 5%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
+button,input,textarea,select{font:inherit}
+.topbar{
+ background:#0B0C0F;border-bottom:1px solid var(--line);
+ padding:14px 5%;display:flex;align-items:center;
+ justify-content:space-between;gap:15px;
+ position:sticky;top:0;z-index:10;
 }
-.logo {
-  color:var(--gold);
-  font-weight:900;
-  letter-spacing:3px;
-  font-size:20px;
+.brand{display:flex;align-items:center;gap:11px}
+.logo{
+ width:43px;height:43px;border:2px solid var(--gold);
+ border-radius:50%;display:grid;place-items:center;
+ color:var(--gold);font-size:25px;font-weight:900;
 }
-nav {display:flex;gap:15px;flex-wrap:wrap}
-nav a {
-  color:var(--cream);
-  text-decoration:none;
-  font-size:12px;
+.brand strong{letter-spacing:2px;font-size:19px}
+.brand small{
+ display:block;color:var(--gold);font-size:9px;
+ letter-spacing:1.5px;margin-top:4px;
 }
-nav a:hover {color:var(--gold)}
-.hero {
-  min-height:88vh;
-  padding:90px 8%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  background:
-  radial-gradient(circle at 80% 20%,#4b3b1555,transparent 35%),
-  linear-gradient(135deg,#101010,#222 65%,#111);
+nav{display:flex;gap:17px;flex-wrap:wrap}
+nav a{
+ color:#DDD;text-decoration:none;font-size:12px;
 }
-.eyebrow {
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:4px;
-  font-size:12px;
-  font-weight:bold;
+nav a:hover{color:var(--gold)}
+.container{max-width:1180px;margin:auto;padding:25px 18px 55px}
+.hero{
+ display:grid;grid-template-columns:1fr 1fr;
+ min-height:420px;background:#1A1C21;
+ border:1px solid var(--line);border-radius:15px;
+ overflow:hidden;
 }
-h1 {
-  font-size:clamp(55px,12vw,115px);
-  line-height:.95;
-  margin:18px 0;
-  color:var(--gold);
-  letter-spacing:4px;
+.hero-content{
+ padding:clamp(25px,5vw,55px);
+ display:flex;flex-direction:column;justify-content:center;
 }
-.hero h2 {
-  font-size:clamp(20px,4vw,34px);
-  max-width:750px;
-  margin:10px 0;
+.kicker{
+ color:var(--gold);font-size:10px;font-weight:bold;
+ letter-spacing:2.5px;text-transform:uppercase;
 }
-.hero p {max-width:700px;color:var(--muted)}
-.btn {
-  display:inline-block;
-  padding:13px 22px;
-  margin:8px 8px 0 0;
-  border:1px solid var(--gold);
-  color:var(--gold);
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:3px;
-  cursor:pointer;
-  background:transparent;
+.hero h1{
+ font-size:clamp(50px,8vw,88px);line-height:.9;
+ letter-spacing:-4px;margin:20px 0 12px;
 }
-.btn.primary {background:var(--gold);color:#111}
-section {padding:75px 8%;border-bottom:1px solid #333}
-.section-label {
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:3px;
-  font-size:12px;
-  font-weight:bold;
+.tagline{font-size:21px;color:var(--gold);font-weight:bold}
+.hero p{color:#C6C8CC;line-height:1.7;font-size:14px}
+.hero-photo{position:relative;min-height:360px;background:#27292D}
+.hero-photo img{
+ width:100%;height:100%;min-height:360px;
+ object-fit:cover;object-position:center;
+ display:block;
 }
-h2 {font-size:clamp(28px,5vw,44px);line-height:1.15}
-h3 {color:var(--gold);font-size:20px}
-p {color:#d0ccc3}
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
-  margin-top:30px;
+.photo-credit{
+ position:absolute;bottom:0;left:0;right:0;
+ background:linear-gradient(transparent,#000E);
+ padding:35px 15px 12px;font-size:10px;color:#EEE;
 }
-.card {
-  background:var(--dark);
-  border:1px solid #393939;
-  border-top:3px solid var(--gold);
-  padding:23px;
-  border-radius:4px;
+.photo-credit a{color:var(--gold)}
+.btn{
+ display:inline-block;border:0;border-radius:7px;
+ padding:12px 16px;font-size:12px;font-weight:bold;
+ cursor:pointer;text-decoration:none;text-align:center;
 }
-.card p {font-size:14px}
-.number {font-size:34px;color:var(--gold);font-weight:bold}
-.highlight {
-  padding:25px;
-  border-left:4px solid var(--green);
-  background:#17251f;
-  margin:25px 0;
+.gold{background:var(--gold);color:#171717}
+.dark{background:#292C32;color:white;border:1px solid #555}
+.green{background:var(--green);color:white}
+.buttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}
+.section{margin-top:40px}
+.section-head{margin-bottom:17px}
+.section-head h2{font-size:25px;margin:8px 0}
+.muted{color:var(--muted);font-size:13px;line-height:1.65}
+.grid{
+ display:grid;grid-template-columns:repeat(4,1fr);gap:13px;
 }
-.steps {counter-reset:step}
-.step {
-  padding:18px 20px 18px 65px;
-  margin:12px 0;
-  background:var(--dark);
-  position:relative;
-  border:1px solid #393939;
+.tile,.card{
+ background:var(--panel);border:1px solid var(--line);
+ border-radius:12px;padding:19px;
 }
-.step:before {
-  counter-increment:step;
-  content:counter(step);
-  position:absolute;
-  left:20px;
-  color:var(--gold);
-  font-size:25px;
-  font-weight:bold;
+.tile{min-height:150px}
+.tile .number{color:var(--gold);font-size:11px;font-weight:bold}
+.tile h3{font-size:17px;margin:15px 0 8px}
+.tile p{font-size:12px;color:var(--muted);line-height:1.6;margin:0}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card h3{margin:0 0 14px;font-size:18px}
+.list-item{
+ padding:12px 0;border-bottom:1px solid var(--line);
+ display:flex;justify-content:space-between;gap:10px;
+ font-size:13px;
 }
-footer {
-  padding:45px 8%;
-  text-align:center;
-  background:#080808;
+.list-item:last-child{border-bottom:0}
+.pill{
+ color:var(--gold);border:1px solid #66552B;
+ border-radius:20px;padding:4px 8px;font-size:9px;
+ white-space:nowrap;
 }
-footer strong {color:var(--gold)}
-.small {font-size:12px;color:#999}
-@media(max-width:650px) {
-  header {align-items:flex-start;flex-direction:column}
-  nav {gap:10px}
-  nav a {font-size:11px}
-  .hero {min-height:75vh;padding:65px 7%}
-  section {padding:55px 7%}
+.post-preview{
+ background:#111317;border:1px solid var(--line);
+ border-radius:10px;padding:17px;
 }
-@media print {
-  header,.btn {display:none}
-  body {background:white;color:black}
-  section,.hero {background:white;color:black;break-inside:avoid}
-  p {color:#333}
-  .card {background:white;border:1px solid #aaa}
+.post-preview small{color:var(--gold);font-weight:bold}
+.post-preview h3{margin:13px 0;font-size:21px}
+.post-preview p{color:#D0D0D0;line-height:1.7;font-size:14px}
+label{display:block;font-size:12px;margin:13px 0 6px}
+input,textarea,select{
+ width:100%;padding:11px;background:#101216;color:white;
+ border:1px solid #494C53;border-radius:7px;
+}
+textarea{min-height:90px;resize:vertical}
+.metric{
+ display:grid;grid-template-columns:repeat(3,1fr);
+ gap:10px;margin:20px 0;
+}
+.metric div{
+ background:#202329;padding:14px;border-radius:9px;
+}
+.metric strong{font-size:22px;display:block;color:var(--gold)}
+.metric span{font-size:10px;color:var(--muted)}
+.notice{
+ margin-top:12px;font-size:11px;
+ color:#92959B;line-height:1.6;
+}
+footer{
+ border-top:1px solid var(--line);margin-top:45px;
+ padding:22px 0;color:#858990;font-size:11px;
+ display:flex;justify-content:space-between;gap:12px;
+ flex-wrap:wrap;
+}
+@media(max-width:760px){
+ .hero{grid-template-columns:1fr}
+ .hero-photo{min-height:280px;max-height:350px}
+ .hero-photo img{min-height:280px}
+ .grid{grid-template-columns:1fr 1fr}
+ .columns{grid-template-columns:1fr}
+ nav{gap:10px}
+}
+@media(max-width:430px){
+ .grid{grid-template-columns:1fr}
+ .container{padding:16px 12px 40px}
+ .topbar{padding:11px 12px}
+ nav a{font-size:10px}
+ .brand strong{font-size:16px}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">AAMUSH TECHNOLOGIES</div>
-  <nav>
-    <a href="#overview">Overview</a>
-    <a href="#brand">Brand</a>
-    <a href="#digital">Digital</a>
-    <a href="#business">Commercial</a>
-    <a href="#partnership">Partnership</a>
-  </nav>
+<header class="topbar">
+ <div class="brand">
+  <div class="logo">S</div>
+  <div>
+   <strong>SENGA</strong>
+   <small>DIGITAL BRAND COMMAND CENTRE</small>
+  </div>
+ </div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#brand">Brand</a>
+  <a href="#content">Content</a>
+  <a href="#studio">Studio</a>
+ </nav>
 </header>
 
-<main>
+<main class="container">
 
-<div class="hero">
-  <div class="eyebrow">Strategic Brand Development Proposal</div>
+<!-- MAIN BRAND PRESENTATION -->
+<section class="hero" id="home">
+ <div class="hero-content">
+  <div class="kicker">Tanzanian Comedy & Entertainment</div>
   <h1>SENGA</h1>
-  <h2>Comedy. Entertainment. Digital Opportunity.</h2>
+  <div class="tagline">Daktari wa Kutibu Stress</div>
   <p>
-    A strategic proposal to develop Senga's existing public identity
-    into a structured, recognisable and commercially sustainable
-    entertainment brand.
+   Comedy, entertainment, gospel and creative expression.
+   A digital platform concept bringing Senga's public
+   creative identity and professional opportunities
+   together in one place.
   </p>
-  <p class="small">
-    Prepared by AAMush Technologies Tanzania
-  </p>
-  <div>
-    <a class="btn primary" href="#overview">Explore Proposal</a>
-    <button class="btn" onclick="window.print()">Save / Print PDF</button>
-    <button class="btn" onclick="shareProposal()">Share Proposal</button>
+  <div class="buttons">
+   <a class="btn gold" href="#studio">Explore Content Studio</a>
+   <a class="btn dark" href="#brand">Explore Brand Identity</a>
   </div>
-</div>
+ </div>
 
-<section id="overview">
-  <div class="section-label">01 / The Opportunity</div>
-  <h2>From Comedy Recognition to a Structured Entertainment Brand</h2>
-  <p>
-    Senga's public comedy identity provides a foundation for a wider
-    entertainment platform. The opportunity is to organise that
-    identity, strengthen audience relationships and create additional
-    commercial pathways.
+ <div class="hero-photo">
+  <img
+   src="https://www.mwanaspoti.co.tz/resource/image/3192168/landscape_ratio2x1/320/160/9249c01b387b63c3694ba5f50d4f8492/Rl/senga-pic.jpg"
+   alt="Senga during a Mwanaspoti interview"
+   onerror="this.style.display='none';this.parentElement.style.background='#25272C';this.parentElement.innerHTML+='<div style=&quot;padding:30px;color:#D4AF37;text-align:center&quot;>SENGA<br><br>Photograph unavailable in this browser.<br><a style=&quot;color:white&quot; href=&quot;https://www.mwanaspoti.co.tz/ms/soka/senga-ataka-akifa-azikwe-na-shuka-la-yanga-3192166&quot;>Open original photograph</a></div>'"
+  >
+  <div class="photo-credit">
+   Editorial photograph: Mwanaspoti.
+   <a href="https://www.mwanaspoti.co.tz/ms/soka/senga-ataka-akifa-azikwe-na-shuka-la-yanga-3192166" target="_blank" rel="noopener">Original publication</a>
+  </div>
+ </div>
+</section>
+
+<!-- BRAND IDENTITY -->
+<section class="section" id="brand">
+ <div class="section-head">
+  <div class="kicker">Brand architecture</div>
+  <h2>One Creative Identity. Multiple Expressions.</h2>
+  <p class="muted">
+   A proposed digital structure for presenting and organising
+   Senga's different creative activities.
   </p>
+ </div>
 
-  <div class="highlight">
-    <h3>Working Brand Direction</h3>
-    <p>
-      SENGA — COMEDY & ENTERTAINMENT
+ <div class="grid">
+  <div class="tile">
+   <div class="number">01 / COMEDY</div>
+   <h3>Comedy & Entertainment</h3>
+   <p>Comedy performances, characters, sketches, short videos and memorable moments.</p>
+  </div>
+  <div class="tile">
+   <div class="number">02 / GOSPEL</div>
+   <h3>Gospel & Ministry</h3>
+   <p>Gospel music, ministry messages, performances and faith-centred creative work.</p>
+  </div>
+  <div class="tile">
+   <div class="number">03 / LEGACY</div>
+   <h3>Senga & Pembe</h3>
+   <p>Classic partnership, archived performances, memorable scenes and creative history.</p>
+  </div>
+  <div class="tile">
+   <div class="number">04 / BUSINESS</div>
+   <h3>Bookings & Partnerships</h3>
+   <p>Event enquiries, commercial collaborations, media appearances and brand partnerships.</p>
+  </div>
+ </div>
+</section>
+
+<!-- COMMAND CENTRE -->
+<section class="section" id="content">
+ <div class="section-head">
+  <div class="kicker">Management dashboard</div>
+  <h2>Content Command Centre</h2>
+  <p class="muted">A structured overview of the proposed content portfolio.</p>
+ </div>
+
+ <div class="metric">
+  <div><strong>04</strong><span>CONTENT PILLARS</span></div>
+  <div><strong>01</strong><span>BRAND PROFILE</span></div>
+  <div><strong>01</strong><span>CONTENT STUDIO</span></div>
+ </div>
+
+ <div class="columns">
+  <div class="card">
+   <h3>Content Portfolio</h3>
+   <div class="list-item"><span>Comedy sketches & characters</span><span class="pill">COMEDY</span></div>
+   <div class="list-item"><span>Gospel songs & messages</span><span class="pill">GOSPEL</span></div>
+   <div class="list-item"><span>Senga–Pembe archive</span><span class="pill">LEGACY</span></div>
+   <div class="list-item"><span>Media interviews</span><span class="pill">PRESS</span></div>
+   <div class="list-item"><span>Live events & appearances</span><span class="pill">EVENTS</span></div>
+  </div>
+
+  <div class="card">
+   <h3>Professional Opportunities</h3>
+   <div class="list-item"><span>Event bookings</span><span class="pill">BOOKING</span></div>
+   <div class="list-item"><span>Brand endorsements</span><span class="pill">BRANDS</span></div>
+   <div class="list-item"><span>Media collaborations</span><span class="pill">MEDIA</span></div>
+   <div class="list-item"><span>Digital content partnerships</span><span class="pill">DIGITAL</span></div>
+   <div class="list-item"><span>Music & entertainment projects</span><span class="pill">PROJECTS</span></div>
+  </div>
+ </div>
+</section>
+
+<!-- INTERACTIVE CONTENT STUDIO -->
+<section class="section" id="studio">
+ <div class="section-head">
+  <div class="kicker">Interactive demonstration</div>
+  <h2>Content Publishing Studio</h2>
+  <p class="muted">
+   Create a sample post, preview the presentation and
+   share its text through WhatsApp.
+  </p>
+ </div>
+
+ <div class="columns">
+  <div class="card">
+   <h3>Post Editor</h3>
+
+   <label for="category">Content category</label>
+   <select id="category">
+    <option>Comedy & Entertainment</option>
+    <option>Gospel & Ministry</option>
+    <option>Senga–Pembe Legacy</option>
+    <option>Bookings & Events</option>
+   </select>
+
+   <label for="postTitle">Post title</label>
+   <input id="postTitle" value="Senga – Daktari wa Kutibu Stress">
+
+   <label for="caption">Post caption</label>
+   <textarea id="caption">Mweee! Stress imezidi? Karibu kwenye dozi ya kicheko. SENGA – Daktari wa Kutibu Stress!</textarea>
+
+   <div class="buttons">
+    <button class="btn gold" onclick="updatePost()">Update Preview</button>
+    <button class="btn green" onclick="sharePost()">Share on WhatsApp</button>
+   </div>
+
+   <p class="notice">
+    This demonstration creates and shares a post message.
+    It does not publish directly to social media accounts.
+   </p>
+  </div>
+
+  <div class="card">
+   <h3>Audience Preview</h3>
+
+   <div class="post-preview">
+    <small id="previewCategory">COMEDY & ENTERTAINMENT</small>
+    <h3 id="previewTitle">Senga – Daktari wa Kutibu Stress</h3>
+    <p id="previewCaption">
+     Mweee! Stress imezidi? Karibu kwenye dozi ya kicheko.
+     SENGA – Daktari wa Kutibu Stress!
     </p>
-    <p>
-      Proposed positioning: authentic Tanzanian comedy that entertains,
-      connects audiences and creates memorable experiences.
-    </p>
-    <p class="small">
-      This is a preliminary working direction, subject to Senga's
-      approval and verification of existing intellectual property.
-    </p>
-  </div>
+    <div class="notice">SENGA · Sample Content Presentation</div>
+   </div>
 
-  <div class="grid">
-    <div class="card">
-      <div class="number">01</div>
-      <h3>Identity</h3>
-      <p>Establish a consistent and recognisable brand system.</p>
-    </div>
-    <div class="card">
-      <div class="number">02</div>
-      <h3>Audience</h3>
-      <p>Organise digital communication and audience engagement.</p>
-    </div>
-    <div class="card">
-      <div class="number">03</div>
-      <h3>Revenue</h3>
-      <p>Develop sustainable commercial and entertainment opportunities.</p>
-    </div>
-    <div class="card">
-      <div class="number">04</div>
-      <h3>Protection</h3>
-      <p>Verify ownership and establish appropriate intellectual property safeguards.</p>
-    </div>
+   <div class="buttons">
+    <button class="btn dark" onclick="copyPost()">Copy Post Text</button>
+    <button class="btn dark" onclick="window.print()">Print / PDF</button>
+   </div>
+   <p class="notice" id="feedback" aria-live="polite"></p>
   </div>
+ </div>
 </section>
 
-<section id="brand">
-  <div class="section-label">02 / Brand Architecture</div>
-  <h2>One Identity. Multiple Opportunities.</h2>
-  <p>
-    The proposed brand architecture should build on the identity
-    Senga already uses and the content audiences already recognise.
-    It should not erase existing recognition or introduce unapproved
-    trademarks.
+<!-- PUBLIC IDENTITY SOURCES -->
+<section class="section">
+ <div class="card">
+  <div class="kicker">Public identity references</div>
+  <h2>Media & Creative History</h2>
+  <p class="muted">
+   The proposed identity structure is informed by public
+   reporting about Senga's comedy career, his description
+   as a stress-relief comedian, his collaboration with
+   Pembe and his wider creative interests.
   </p>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Primary Identity</h3>
-      <p>SENGA</p>
-      <p>Core public-facing name, subject to ownership verification.</p>
-    </div>
-    <div class="card">
-      <h3>Entertainment Identity</h3>
-      <p>Comedy & Entertainment</p>
-      <p>A broader category for performances, productions and collaborations.</p>
-    </div>
-    <div class="card">
-      <h3>Recognisable Content</h3>
-      <p>Daktari wa Kutibu Stresi</p>
-      <p>A historical content identity to be verified with Senga before commercial adoption.</p>
-    </div>
+  <div class="buttons">
+   <a class="btn dark"
+    href="https://www.mwanaspoti.co.tz/ms/burudani/ukitaka-kuondoa-stresi-kutana-na-huyu-senga-3179702"
+    target="_blank" rel="noopener">Senga Profile – Mwanaspoti</a>
+   <a class="btn dark"
+    href="https://www.mwanaspoti.co.tz/ms/burudani/mweee-eti-senga-hajapata-mrithi-3080546"
+    target="_blank" rel="noopener">Senga & Pembe – Mwanaspoti</a>
   </div>
-
-  <h3>Proposed Visual Direction</h3>
-  <div class="grid">
-    <div class="card">
-      <h3>Black</h3>
-      <p>Authority, confidence and visual consistency.</p>
-    </div>
-    <div class="card">
-      <h3>Gold</h3>
-      <p>Distinctiveness and premium positioning.</p>
-    </div>
-    <div class="card">
-      <h3>Cream</h3>
-      <p>Clarity and readability.</p>
-    </div>
-    <div class="card">
-      <h3>Green Accent</h3>
-      <p>A restrained East African identity reference.</p>
-    </div>
-  </div>
+ </div>
 </section>
 
-<section id="digital">
-  <div class="section-label">03 / Digital Transformation</div>
-  <h2>A Central Digital Home for Senga</h2>
-  <p>
-    A dedicated digital platform would provide an organised point
-    of reference for audiences, event organisers, sponsors and
-    commercial partners.
-  </p>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Official Website</h3>
-      <p>Biography, approved brand identity, content portfolio, booking enquiries and partnership information.</p>
-    </div>
-    <div class="card">
-      <h3>Social Media Integration</h3>
-      <p>Connect verified official channels and maintain consistent brand presentation.</p>
-    </div>
-    <div class="card">
-      <h3>Content Management</h3>
-      <p>Organise video releases, comedy series, promotional material and audience communication.</p>
-    </div>
-    <div class="card">
-      <h3>Booking Infrastructure</h3>
-      <p>Provide a structured enquiry channel for events, corporate appearances and performances.</p>
-    </div>
-  </div>
-
-  <div class="highlight">
-    <h3>Digital Governance</h3>
-    <p>
-      Senga or his authorised representatives should retain ownership
-      and administrative control of official accounts, domains and
-      audience data. Technology partners should receive only agreed
-      operational access.
-    </p>
-  </div>
-</section>
-
-<section id="business">
-  <div class="section-label">04 / Commercial Development</div>
-  <h2>Building Multiple Revenue Channels</h2>
-  <p>
-    A recognised entertainment brand can create opportunities
-    beyond individual performances. Commercial development should
-    be based on audience data, market demand and negotiated agreements.
-  </p>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Live Performances</h3>
-      <p>Ticketed comedy shows, tours, festivals and corporate events.</p>
-    </div>
-    <div class="card">
-      <h3>Brand Endorsements</h3>
-      <p>Partnerships with companies seeking authentic audience engagement.</p>
-    </div>
-    <div class="card">
-      <h3>Sponsored Content</h3>
-      <p>Commercially sponsored comedy and digital campaigns.</p>
-    </div>
-    <div class="card">
-      <h3>Digital Monetisation</h3>
-      <p>Platform monetisation and other eligible digital distribution opportunities.</p>
-    </div>
-    <div class="card">
-      <h3>Merchandise</h3>
-      <p>Approved branded apparel and entertainment merchandise.</p>
-    </div>
-    <div class="card">
-      <h3>Media & Production</h3>
-      <p>Original productions, collaborations and licensed content.</p>
-    </div>
-  </div>
-</section>
-
-<section id="protection">
-  <div class="section-label">05 / Intellectual Property</div>
-  <h2>Protect the Identity Before Expanding It</h2>
-  <p>
-    Before adopting any new logo, slogan, character identity or
-    commercial name, the project should establish what Senga already
-    owns, what is registered and what may be used commercially.
-  </p>
-
-  <div class="steps">
-    <div class="step">
-      <strong>Identity verification</strong>
-      <p>Confirm the correct legal identity of the artist and authorised representatives.</p>
-    </div>
-    <div class="step">
-      <strong>Existing rights review</strong>
-      <p>Identify existing trademarks, logos, content rights and registered business interests.</p>
-    </div>
-    <div class="step">
-      <strong>Trademark due diligence</strong>
-      <p>Conduct appropriate searches and obtain professional guidance through the relevant registration authority.</p>
-    </div>
-    <div class="step">
-      <strong>Written authorisation</strong>
-      <p>Document ownership, permissions, licensing and commercial use before launch.</p>
-    </div>
-  </div>
-
-  <p class="small">
-    No registration, ownership or trademark availability is asserted
-    by this preliminary proposal.
-  </p>
-</section>
-
-<section id="delivery">
-  <div class="section-label">06 / Implementation</div>
-  <h2>Proposed Delivery Roadmap</h2>
-
-  <div class="steps">
-    <div class="step">
-      <strong>Phase 1 — Discovery</strong>
-      <p>Consultation with Senga and his team; understand existing identity, content and commercial priorities.</p>
-    </div>
-    <div class="step">
-      <strong>Phase 2 — Verification</strong>
-      <p>Review identity, existing brand assets, ownership and intellectual property position.</p>
-    </div>
-    <div class="step">
-      <strong>Phase 3 — Brand Development</strong>
-      <p>Develop the approved identity system, visual standards and communication direction.</p>
-    </div>
-    <div class="step">
-      <strong>Phase 4 — Digital Development</strong>
-      <p>Build the website, booking channel and agreed digital infrastructure.</p>
-    </div>
-    <div class="step">
-      <strong>Phase 5 — Commercial Preparation</strong>
-      <p>Prepare partnership materials, sponsorship packages and revenue models.</p>
-    </div>
-    <div class="step">
-      <strong>Phase 6 — Launch and Evaluation</strong>
-      <p>Launch approved assets, monitor audience response and evaluate performance.</p>
-    </div>
-  </div>
-</section>
-
-<section id="partnership">
-  <div class="section-label">07 / Proposed Partnership</div>
-  <h2>Creative Leadership. Technology. Commercial Structure.</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Senga & His Team</h3>
-      <p>
-        Creative direction, artistic identity, content approval,
-        audience relationships and final decisions on commercial priorities.
-      </p>
-    </div>
-    <div class="card">
-      <h3>AAMush Technologies Tanzania</h3>
-      <p>
-        Proposed digital strategy, technology infrastructure,
-        website development, brand systems and agreed implementation support.
-      </p>
-    </div>
-  </div>
-
-  <div class="highlight">
-    <h3>Governance Principle</h3>
-    <p>
-      Creative ownership and final approval remain with Senga or
-      his authorised representatives. AAMush Technologies would
-      operate within a clearly agreed scope of work.
-    </p>
-    <p>
-      Fees, responsibilities, revenue sharing, intellectual property,
-      account access and termination arrangements must be agreed
-      in writing before implementation.
-    </p>
-  </div>
-
-  <h3>Proposed First Meeting</h3>
-  <p>
-    The initial meeting should establish the current brand position,
-    existing registrations, desired commercial direction and the
-    scope of a possible partnership.
-  </p>
-  <ul>
-    <li>Which name and identity does Senga currently use officially?</li>
-    <li>Which trademarks or brand assets are already registered?</li>
-    <li>Which social media channels are officially controlled by his team?</li>
-    <li>What are the immediate commercial priorities?</li>
-    <li>What role would Senga like AAMush Technologies to undertake?</li>
-  </ul>
-
-  <a class="btn primary" href="https://wa.me/" target="_blank" rel="noopener">Contact via WhatsApp</a>
-</section>
+<footer>
+ <span>SENGA · DIGITAL BRAND COMMAND CENTRE</span>
+ <span>Independent presentation concept · 2026</span>
+</footer>
 
 </main>
 
-<footer>
-  <strong>AAMUSH TECHNOLOGIES TANZANIA</strong>
-  <p>Digital Strategy • Brand Development • Technology Solutions</p>
-  <p class="small">
-    Preliminary confidential discussion document.
-    Prepared for consideration by Senga and his authorised team.
-  </p>
-  <p class="small">© 2026 AAMush Technologies Tanzania</p>
-</footer>
-
 <script>
-function shareProposal() {
-  const message =
-    "SENGA — Brand Development and Commercial Partnership Proposal. " +
-    "Prepared by AAMush Technologies Tanzania. View the proposal: " +
-    window.location.href;
+function updatePost(){
+ const category=document.getElementById("category").value;
+ const title=document.getElementById("postTitle").value;
+ const caption=document.getElementById("caption").value;
 
-  if (navigator.share) {
-    navigator.share({
-      title: "Senga Brand Development Proposal",
-      text: message,
-      url: window.location.href
-    }).catch(() => {});
-  } else {
-    window.open(
-      "https://wa.me/?text=" + encodeURIComponent(message),
-      "_blank"
-    );
-  }
+ document.getElementById("previewCategory").textContent=
+  category.toUpperCase();
+ document.getElementById("previewTitle").textContent=title;
+ document.getElementById("previewCaption").textContent=caption;
+ document.getElementById("feedback").textContent=
+  "Preview successfully updated.";
+}
+
+function getPostText(){
+ return document.getElementById("postTitle").value+
+  "\n\n"+
+  document.getElementById("caption").value+
+  "\n\nSENGA – Daktari wa Kutibu Stress";
+}
+
+function sharePost(){
+ updatePost();
+ const url="https://wa.me/?text="+encodeURIComponent(getPostText());
+ window.open(url,"_blank","noopener");
+}
+
+async function copyPost(){
+ try{
+  await navigator.clipboard.writeText(getPostText());
+  document.getElementById("feedback").textContent=
+   "Post text copied successfully.";
+ }catch(error){
+  document.getElementById("feedback").textContent=
+   "Select and copy the post text manually.";
+ }
 }
 </script>
 
