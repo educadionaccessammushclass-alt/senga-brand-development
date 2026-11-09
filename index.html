@@ -1,183 +1,692 @@
 <!DOCTYPE html>
-<html lang="sw">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="theme-color" content="#080808">
-  <meta name="description" content="SENGA – Daktari wa Kutibu Stress. Official Senga Brand Development Platform.">
-
-  <title>SENGA | Daktari wa Kutibu Stress</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      width: 100%;
-      min-height: 100%;
-      overflow: hidden;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #080808;
-    }
-
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      height: 100svh;
-      min-height: 500px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      isolation: isolate;
-      background: #080808;
-    }
-
-    .hero-image {
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-    }
-
-    .overlay {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(0,0,0,0.20) 0%,
-          rgba(0,0,0,0.10) 35%,
-          rgba(0,0,0,0.58) 75%,
-          rgba(0,0,0,0.82) 100%
-        );
-    }
-
-    .branding {
-      width: 100%;
-      padding: 30px 20px;
-      color: #ffffff;
-      margin-top: 24vh;
-      animation: appear 1.2s ease-out;
-    }
-
-    .brand-name {
-      font-size: clamp(55px, 12vw, 125px);
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      line-height: 1;
-      text-shadow: 0 5px 25px rgba(0,0,0,0.75);
-    }
-
-    .brand-line {
-      width: 85px;
-      height: 4px;
-      background: #d6ad55;
-      margin: 25px auto;
-    }
-
-    .brand-tagline {
-      font-size: clamp(17px, 3.5vw, 32px);
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      text-shadow: 0 3px 12px rgba(0,0,0,0.95);
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 25px;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      padding: 10px;
-      color: rgba(255,255,255,0.75);
-      font-size: 11px;
-      letter-spacing: 2px;
-    }
-
-    @keyframes appear {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .hero-image {
-        object-position: center center;
-      }
-
-      .branding {
-        margin-top: 30vh;
-      }
-
-      .brand-name {
-        letter-spacing: 0.09em;
-      }
-
-      .brand-tagline {
-        letter-spacing: 0.035em;
-      }
-    }
-
-    @media (max-height: 550px) {
-      .branding {
-        margin-top: 12vh;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .branding {
-        animation: none;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101010">
+<title>SENGA | Comedy & Music Command Centre</title>
+<style>
+:root {
+  --bg:#0b0d0c;
+  --panel:#181c19;
+  --gold:#d7ad48;
+  --green:#16865c;
+  --white:#f5f1e7;
+  --muted:#a9aea8;
+  --line:#343b35;
+}
+*{box-sizing:border-box}
+body{
+ margin:0;background:var(--bg);color:var(--white);
+ font-family:Arial,Helvetica,sans-serif;line-height:1.5
+}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+header{
+ position:sticky;top:0;z-index:10;
+ display:flex;justify-content:space-between;align-items:center;
+ padding:14px 5%;background:#101210ed;
+ border-bottom:1px solid var(--line)
+}
+.brand{font-weight:900;font-size:23px;color:var(--gold);letter-spacing:3px}
+.brand small{display:block;font-size:9px;color:var(--muted)}
+.container{width:min(1150px,92%);margin:auto}
+.btn{
+ padding:11px 17px;border:1px solid var(--gold);
+ background:var(--gold);color:#17140c;border-radius:6px;font-weight:bold
+}
+.btn.alt{background:transparent;color:var(--white);border-color:var(--line)}
+.btn.green{background:var(--green);border-color:var(--green);color:white}
+.btn.red{background:transparent;border-color:#b74f48;color:#ffaaa0}
+.hero{
+ min-height:440px;display:grid;grid-template-columns:1fr 1fr;
+ gap:30px;align-items:center;padding:45px 0
+}
+.hero h1{font-size:clamp(42px,7vw,76px);line-height:1;margin:12px 0}
+.hero h1 span{color:var(--gold)}
+.hero p{color:#c7ccc6;font-size:17px}
+.eyebrow{color:var(--gold);letter-spacing:3px;font-size:12px;font-weight:bold}
+.photo{
+ height:360px;border:1px solid #705b2b;border-radius:15px;
+ overflow:hidden;background:#272a25
+}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.photo-caption{font-size:10px;color:#ccc;background:#111;padding:7px}
+nav{display:flex;gap:8px;flex-wrap:wrap;padding:18px 0}
+nav a{
+ color:var(--white);text-decoration:none;border:1px solid var(--line);
+ border-radius:20px;padding:7px 12px;font-size:12px
+}
+nav a:hover{color:var(--gold);border-color:var(--gold)}
+section{padding:25px 0;scroll-margin-top:80px}
+h2{font-size:26px;margin:0 0 5px}
+.subtitle{color:var(--muted);font-size:13px;margin-bottom:18px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat,.panel,.tile{
+ background:var(--panel);border:1px solid var(--line);border-radius:10px
+}
+.stat{padding:17px}
+.stat strong{display:block;color:var(--gold);font-size:27px}
+.stat span{color:var(--muted);font-size:12px}
+.panel{padding:20px;margin:15px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tile{padding:17px}
+.tile h3{color:var(--gold);margin:0 0 8px}
+.tile p{font-size:13px;color:var(--muted);margin:0}
+.formgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-size:12px;font-weight:bold;color:#d0d2cc}
+.field input,.field select,.field textarea{
+ width:100%;padding:11px;background:#0d100e;color:white;
+ border:1px solid #424940;border-radius:6px
+}
+.field textarea{min-height:85px}
+.full{grid-column:1/-1}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
+.tablewrap{overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:650px}
+th,td{padding:11px;text-align:left;border-bottom:1px solid var(--line);font-size:12px}
+th{color:var(--gold)}
+.muted{color:var(--muted)}
+.result{
+ padding:12px;background:#282215;border:1px solid #695329;
+ color:#e6d49e;border-radius:7px;font-size:13px;margin-top:12px
+}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px;margin-top:30px}
+footer strong{color:var(--gold)}
+@media(max-width:750px){
+ .hero{grid-template-columns:1fr;padding:25px 0}
+ .photo{height:280px;order:-1}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .grid{grid-template-columns:1fr 1fr}
+ .formgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+ .grid,.formgrid{grid-template-columns:1fr}
+ header{padding:12px 4%}
+ .hero h1{font-size:46px}
+}
+@media print{
+ header,nav,.actions,button{display:none!important}
+ body{background:white;color:black}
+ .panel,.tile,.stat{background:white;color:black}
+}
+</style>
 </head>
-
 <body>
 
-  <main class="hero">
+<header>
+ <div class="brand">
+  SENGA
+  <small>COMEDY • MUSIC • ENTERTAINMENT</small>
+ </div>
+ <div class="actions">
+  <button class="btn alt" onclick="window.print()">Print</button>
+  <button class="btn" onclick="sharePage()">Share</button>
+ </div>
+</header>
 
-    <!-- Exact photograph supplied by the owner -->
-    <img
-      class="hero-image"
-      src="https://www.mwanaspoti.co.tz/resource/image/3192168/landscape_ratio16x9/1600/900/2e46a76b955145cd7d37e052a8139c66/KR/senga-pic.jpg"
-      alt="Senga"
-      fetchpriority="high"
-    >
+<main class="container">
 
-    <div class="overlay"></div>
+<section class="hero" id="home">
+ <div>
+  <div class="eyebrow">SENGA AFRICA</div>
+  <h1>DAKTARI WA<br><span>KUTIBU STRESS.</span></h1>
+  <p>
+   Comedy, music, singing, live performances and entertainment.
+   A digital command centre for managing Senga's public identity,
+   content, national bookings and commercial partnerships.
+  </p>
+  <div class="actions">
+   <a href="#booking"><button class="btn">Book Senga</button></a>
+   <a href="#content"><button class="btn alt">Content Centre</button></a>
+  </div>
+ </div>
+ <div>
+  <div class="photo">
+   <img
+    src="https://www.mwanaspoti.co.tz/resource/image/3179704/landscape_ratio2x1/320/160/802c83ecb1adf9015db3fff26d642fbe/Ab/pic-senga.jpg"
+    alt="Senga"
+    onerror="this.style.display='none'">
+  </div>
+  <div class="photo-caption">
+   Senga — comedy and music entertainment.
+  </div>
+ </div>
+</section>
 
-    <section class="branding">
-      <h1 class="brand-name">SENGA</h1>
+<nav>
+ <a href="#dashboard">Dashboard</a>
+ <a href="#identity">Identity</a>
+ <a href="#content">Content</a>
+ <a href="#booking">National Bookings</a>
+ <a href="#register">Performance Register</a>
+ <a href="#commercial">Commercial</a>
+ <a href="#backup">Data Management</a>
+</nav>
 
-      <div class="brand-line"></div>
+<section id="dashboard">
+ <h2>Command Dashboard</h2>
+ <p class="subtitle">Operational overview.</p>
+ <div class="stats">
+  <div class="stat"><strong id="totalBookings">0</strong><span>Bookings</span></div>
+  <div class="stat"><strong id="pendingBookings">0</strong><span>Pending enquiries</span></div>
+  <div class="stat"><strong id="confirmedBookings">0</strong><span>Confirmed shows</span></div>
+  <div class="stat"><strong id="totalValue">TZS 0</strong><span>Quoted value</span></div>
+ </div>
+</section>
 
-      <p class="brand-tagline">
-        Daktari wa Kutibu Stress
-      </p>
-    </section>
+<section id="identity">
+ <h2>Brand & Professional Identity</h2>
+ <p class="subtitle">Comedy, music and entertainment.</p>
+ <div class="grid">
+  <article class="tile">
+   <h3>SENGA COMEDY</h3>
+   <p>Daktari wa kutibu stress. Comedy, humour and public entertainment.</p>
+  </article>
+  <article class="tile">
+   <h3>SENGA MUSIC</h3>
+   <p>Singing, Gospel music and musical performances.</p>
+  </article>
+  <article class="tile">
+   <h3>LIVE ENTERTAINMENT</h3>
+   <p>Live shows, events, festivals and stage performances.</p>
+  </article>
+  <article class="tile">
+   <h3>ACTING & PRODUCTION</h3>
+   <p>Comedy sketches, acting, television and film production.</p>
+  </article>
+  <article class="tile">
+   <h3>DIGITAL MEDIA</h3>
+   <p>Social media content, video publishing and digital campaigns.</p>
+  </article>
+  <article class="tile">
+   <h3>COMMUNITY ENGAGEMENT</h3>
+   <p>Community programmes, institutional events and public campaigns.</p>
+  </article>
+ </div>
+</section>
 
-    <footer class="footer">
-      SENGA OFFICIAL BRAND DEVELOPMENT
-    </footer>
+<section id="content">
+ <h2>Content Command Centre</h2>
+ <p class="subtitle">Content planning and publishing register.</p>
 
-  </main>
+ <div class="panel">
+  <div class="formgrid">
+   <div class="field">
+    <label>Content title</label>
+    <input id="contentTitle" placeholder="Enter content title">
+   </div>
+   <div class="field">
+    <label>Content category</label>
+    <select id="contentType">
+     <option>Comedy</option>
+     <option>Gospel Music</option>
+     <option>Live Performance</option>
+     <option>Acting</option>
+     <option>Interview</option>
+     <option>Advertisement</option>
+     <option>Community Campaign</option>
+    </select>
+   </div>
+   <div class="field">
+    <label>Publishing date</label>
+    <input type="date" id="contentDate">
+   </div>
+   <div class="field">
+    <label>Platform</label>
+    <select id="contentPlatform">
+     <option>TikTok</option>
+     <option>Instagram</option>
+     <option>Facebook</option>
+     <option>YouTube</option>
+     <option>WhatsApp</option>
+     <option>Television</option>
+     <option>Live Stage</option>
+    </select>
+   </div>
+   <div class="field">
+    <label>Status</label>
+    <select id="contentStatus">
+     <option>Idea</option>
+     <option>In Production</option>
+     <option>Ready</option>
+     <option>Published</option>
+    </select>
+   </div>
+   <div class="field">
+    <label>Content link</label>
+    <input id="contentLink" placeholder="https://...">
+   </div>
+   <div class="field full">
+    <label>Script / notes</label>
+    <textarea id="contentNotes"></textarea>
+   </div>
+  </div>
+  <div class="actions">
+   <button class="btn" onclick="addContent()">Save Content</button>
+  </div>
+ </div>
 
+ <div class="panel">
+  <h3>Content Register</h3>
+  <div class="tablewrap">
+   <table>
+    <thead>
+     <tr><th>Title</th><th>Category</th><th>Date</th><th>Platform</th><th>Status</th><th>Action</th></tr>
+    </thead>
+    <tbody id="contentRows"></tbody>
+   </table>
+  </div>
+ </div>
+</section>
+
+<section id="booking">
+ <h2>National Touring & Bookings 360</h2>
+ <p class="subtitle">
+  Tanzania regional booking system. Journey estimates use Dar es Salaam as the starting point.
+ </p>
+
+ <div class="panel">
+  <h3>Performance Enquiry</h3>
+  <div class="formgrid">
+
+   <div class="field">
+    <label>Client / Organisation</label>
+    <input id="client" placeholder="Client name">
+   </div>
+
+   <div class="field">
+    <label>Telephone / WhatsApp</label>
+    <input id="phone" type="tel" placeholder="+255...">
+   </div>
+
+   <div class="field">
+    <label>Event type</label>
+    <select id="event">
+     <option>Corporate Event</option>
+     <option>Wedding</option>
+     <option>Public Show</option>
+     <option>Festival</option>
+     <option>School / University</option>
+     <option>Religious Event</option>
+     <option>Community Event</option>
+     <option>Television / Media</option>
+    </select>
+   </div>
+
+   <div class="field">
+    <label>Region</label>
+    <select id="region" onchange="loadTowns()">
+     <option value="">Select region</option>
+    </select>
+   </div>
+
+   <div class="field">
+    <label>Town / District</label>
+    <select id="town" onchange="setDistance()" disabled>
+     <option>Select region first</option>
+    </select>
+   </div>
+
+   <div class="field">
+    <label>Event date</label>
+    <input type="date" id="eventDate">
+   </div>
+
+   <div class="field">
+    <label>Travel arrangement</label>
+    <select id="travelType" onchange="calculate()">
+     <option value="one">One way</option>
+     <option value="return">Return journey</option>
+     <option value="island">Island transfer</option>
+    </select>
+   </div>
+
+   <div class="field">
+    <label>Distance (one way km)</label>
+    <input type="number" id="distance" min="0" oninput="calculate()">
+   </div>
+
+   <div class="field">
+    <label>Travel rate per km (TZS)</label>
+    <input type="number" id="rate" value="1000" min="0" oninput="calculate()">
+   </div>
+
+   <div class="field">
+    <label>Performance fee (TZS)</label>
+    <input type="number" id="fee" value="0" min="0" oninput="calculate()">
+   </div>
+
+   <div class="field">
+    <label>Other expenses (TZS)</label>
+    <input type="number" id="other" value="0" min="0" oninput="calculate()">
+   </div>
+
+   <div class="field">
+    <label>Booking status</label>
+    <select id="status">
+     <option>Pending</option>
+     <option>Contacted</option>
+     <option>Negotiation</option>
+     <option>Confirmed</option>
+     <option>Completed</option>
+     <option>Cancelled</option>
+    </select>
+   </div>
+
+   <div class="field full">
+    <label>Venue, accommodation, sound and additional requirements</label>
+    <textarea id="notes"></textarea>
+   </div>
+  </div>
+
+  <div class="result" id="quotation">
+   Select a region and town to calculate an estimated quotation.
+  </div>
+
+  <div class="actions">
+   <button class="btn" onclick="calculate()">Calculate Quotation</button>
+   <button class="btn green" onclick="saveBooking()">Save Booking</button>
+  </div>
+  <p class="muted" style="font-size:11px">
+   Distances are indicative planning estimates, not live navigation measurements.
+   Confirm actual routes, ferry charges, accommodation and transport costs before contracting.
+  </p>
+ </div>
+</section>
+
+<section id="register">
+ <h2>National Performance Register</h2>
+ <p class="subtitle">All saved performance enquiries.</p>
+ <div class="panel">
+  <div class="tablewrap">
+   <table>
+    <thead>
+     <tr>
+      <th>Client</th><th>Location</th><th>Date</th>
+      <th>Distance</th><th>Quotation</th><th>Status</th><th>Action</th>
+     </tr>
+    </thead>
+    <tbody id="bookingRows"></tbody>
+   </table>
+  </div>
+ </div>
+</section>
+
+<section id="commercial">
+ <h2>Commercial & Partnerships</h2>
+ <p class="subtitle">Business development and revenue opportunities.</p>
+ <div class="grid">
+  <article class="tile">
+   <h3>Brand Endorsements</h3>
+   <p>Corporate advertising, product campaigns and ambassador agreements.</p>
+  </article>
+  <article class="tile">
+   <h3>Event Bookings</h3>
+   <p>Corporate functions, festivals, weddings and public performances.</p>
+  </article>
+  <article class="tile">
+   <h3>Music Partnerships</h3>
+   <p>Gospel music, recording, production and live music engagements.</p>
+  </article>
+  <article class="tile">
+   <h3>Digital Monetisation</h3>
+   <p>Sponsored content, social media campaigns and video partnerships.</p>
+  </article>
+  <article class="tile">
+   <h3>Media Production</h3>
+   <p>Television, radio, interviews and creative production.</p>
+  </article>
+  <article class="tile">
+   <h3>Content Rights</h3>
+   <p>Agreements, permissions, image use and intellectual property management.</p>
+  </article>
+ </div>
+</section>
+
+<section id="backup">
+ <h2>Data Management</h2>
+ <div class="panel">
+  <p class="muted">
+   Records are stored in this browser on this device. Export a backup regularly.
+  </p>
+  <div class="actions">
+   <button class="btn" onclick="exportBackup()">Export Backup</button>
+   <label class="btn alt" for="importFile">Import Backup</label>
+   <input type="file" id="importFile" accept=".json" hidden onchange="importBackup(event)">
+   <button class="btn red" onclick="clearRecords()">Delete All Records</button>
+  </div>
+ </div>
+</section>
+
+</main>
+
+<footer>
+ <div class="container">
+  <strong>SENGA COMEDY & MUSIC COMMAND CENTRE</strong><br>
+  Developed by AAMush Technologies Tanzania Ltd.<br>
+  Human Authority. Machine Execution. Human Progress.<br>
+  © <span id="year"></span>
+ </div>
+</footer>
+
+<script>
+/* NATIONAL LOCATION DATABASE
+   Distances are indicative estimates from Dar es Salaam.
+   Verify all routes before commercial quotations.
+*/
+const locations = {
+"Arusha":{"Arusha City":640,"Arusha DC":660,"Karatu":620,"Longido":560,"Meru":630,"Monduli":570,"Ngorongoro":700},
+"Dar es Salaam":{"Ilala":0,"Kinondoni":12,"Temeke":15,"Ubungo":15,"Kigamboni":18},
+"Dodoma":{"Dodoma City":450,"Bahi":480,"Chamwino":470,"Chemba":500,"Kondoa":450,"Kongwa":330,"Mpwapwa":380},
+"Geita":{"Geita Town":1050,"Bukombe":1000,"Chato":1100,"Mbogwe":1030,"Nyang'hwale":1080},
+"Iringa":{"Iringa Municipal":500,"Iringa DC":520,"Kilolo":560,"Mafinga":570,"Mufindi":590},
+"Kagera":{"Bukoba":1450,"Biharamulo":1200,"Karagwe":1350,"Kyerwa":1400,"Missenyi":1420,"Muleba":1400,"Ngara":1300},
+"Katavi":{"Mpanda":1250,"Mlele":1300,"Nsimbo":1280,"Tanganyika":1270},
+"Kigoma":{"Kigoma/Ujiji":1350,"Buhigwe":1400,"Kakonko":1450,"Kasulu":1400,"Kibondo":1500,"Uvinza":1300},
+"Kilimanjaro":{"Moshi":570,"Hai":550,"Mwanga":520,"Rombo":590,"Same":450,"Siha":570},
+"Lindi":{"Lindi Municipal":450,"Kilwa":320,"Liwale":600,"Nachingwea":550,"Ruangwa":520},
+"Manyara":{"Babati":650,"Hanang":700,"Kiteto":300,"Mbulu":750,"Simanjiro":550},
+"Mara":{"Musoma":1250,"Bunda":1150,"Butiama":1220,"Rorya":1300,"Serengeti":1100,"Tarime":1350},
+"Mbeya":{"Mbeya City":820,"Busokelo":900,"Chunya":900,"Kyela":950,"Mbarali":800,"Rungwe":880},
+"Morogoro":{"Morogoro Municipal":195,"Gairo":300,"Ifakara":420,"Kilosa":300,"Malinyi":500,"Mlimba":520,"Mvomero":240,"Ulanga":480},
+"Mtwara":{"Mtwara Municipal":560,"Masasi":650,"Nanyamba":600,"Newala":700,"Tandahimba":680},
+"Mwanza":{"Mwanza City":1150,"Ilemela":1150,"Kwimba":1100,"Magu":1100,"Misungwi":1080,"Sengerema":1200,"Ukerewe":1200},
+"Njombe":{"Njombe Town":700,"Ludewa":850,"Makambako":650,"Makete":850,"Wanging'ombe":720},
+"Pwani":{"Kibaha":40,"Bagamoyo":75,"Chalinze":100,"Kisarawe":60,"Mafia":450,"Mkuranga":55,"Rufiji":350,"Kibiti":280},
+"Rukwa":{"Sumbawanga":1050,"Kalambo":1100,"Nkasi":1150},
+"Ruvuma":{"Songea":900,"Mbinga":1000,"Namtumbo":950,"Nyasa":1100,"Tunduru":1050},
+"Shinyanga":{"Shinyanga Municipal":950,"Kahama":1000,"Kishapu":900,"Msalala":1020,"Ushetu":1050},
+"Simiyu":{"Bariadi":1050,"Busega":1100,"Itilima":1080,"Maswa":1000,"Meatu":1050},
+"Singida":{"Singida Municipal":600,"Ikungi":650,"Iramba":700,"Manyoni":500,"Mkalama":700},
+"Songwe":{"Vwawa":950,"Ileje":1050,"Momba":1000,"Songwe":900},
+"Tabora":{"Tabora Municipal":900,"Igunga":800,"Kaliua":1000,"Nzega":850,"Sikonge":950,"Urambo":950,"Uyui":900},
+"Tanga":{"Tanga City":350,"Bumbuli":450,"Handeni":300,"Kilindi":380,"Korogwe":380,"Lushoto":450,"Mkinga":400,"Muheza":370,"Pangani":380},
+"Zanzibar North":{"Kaskazini A - Mkokotoni":75,"Kaskazini B - Mahonda":85},
+"Zanzibar South":{"Kati - Mwera":65,"Kusini - Paje":65},
+"Zanzibar Urban/West":{"Stone Town":60,"Magharibi A":65,"Magharibi B":70},
+"Songwe Region":{"Vwawa":950,"Ileje":1050,"Momba":1000,"Songwe":900},
+"Njombe Region":{"Njombe Town":700,"Ludewa":850,"Makambako":650,"Makete":850},
+"Rukwa Region":{"Sumbawanga":1050,"Kalambo":1100,"Nkasi":1150}
+};
+
+const KEY="SENGA_COMMAND_CENTRE_DATA";
+let data=JSON.parse(localStorage.getItem(KEY)||'{"bookings":[],"content":[]}');
+
+function saveData(){
+ localStorage.setItem(KEY,JSON.stringify(data));
+ render();
+}
+function safe(v){
+ return String(v??"").replace(/[&<>"']/g,c=>({
+ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+ }[c]));
+}
+function money(n){
+ return "TZS "+Number(n||0).toLocaleString("en-US");
+}
+function init(){
+ const region=document.getElementById("region");
+ Object.keys(locations).forEach(r=>{
+  const option=document.createElement("option");
+  option.value=r;option.textContent=r;
+  region.appendChild(option);
+ });
+ document.getElementById("year").textContent=new Date().getFullYear();
+ render();
+}
+function loadTowns(){
+ const r=document.getElementById("region").value;
+ const town=document.getElementById("town");
+ town.innerHTML='<option value="">Select town</option>';
+ if(!r){town.disabled=true;return}
+ Object.keys(locations[r]).forEach(t=>{
+  const o=document.createElement("option");
+  o.value=t;o.textContent=t;town.appendChild(o);
+ });
+ town.disabled=false;
+}
+function setDistance(){
+ const r=document.getElementById("region").value;
+ const t=document.getElementById("town").value;
+ if(r&&t){
+  document.getElementById("distance").value=locations[r][t];
+  calculate();
+ }
+}
+function calculate(){
+ const d=Number(document.getElementById("distance").value||0);
+ const rate=Number(document.getElementById("rate").value||0);
+ const fee=Number(document.getElementById("fee").value||0);
+ const other=Number(document.getElementById("other").value||0);
+ const type=document.getElementById("travelType").value;
+ const multiplier=type==="return"?2:1;
+ const travel=d*rate*multiplier;
+ const total=travel+fee+other;
+ document.getElementById("quotation").textContent=
+ "Estimated travel: "+money(travel)+
+ " | Performance fee: "+money(fee)+
+ " | Other expenses: "+money(other)+
+ " | Preliminary total: "+money(total)+
+ (type==="island"?" | Ferry/flight not included.":"");
+ return {d,travel,fee,other,total};
+}
+function saveBooking(){
+ const client=document.getElementById("client").value.trim();
+ const region=document.getElementById("region").value;
+ const town=document.getElementById("town").value;
+ if(!client||!region||!town){
+  alert("Enter client, region and town.");
+  return;
+ }
+ const q=calculate();
+ data.bookings.unshift({
+  id:Date.now(),
+  client,
+  phone:document.getElementById("phone").value,
+  event:document.getElementById("event").value,
+  region,town,
+  date:document.getElementById("eventDate").value,
+  distance:q.d,
+  total:q.total,
+  status:document.getElementById("status").value
+ });
+ saveData();
+ alert("Booking saved successfully.");
+}
+function addContent(){
+ const title=document.getElementById("contentTitle").value.trim();
+ if(!title){alert("Enter content title.");return}
+ data.content.unshift({
+  id:Date.now(),title,
+  type:document.getElementById("contentType").value,
+  date:document.getElementById("contentDate").value,
+  platform:document.getElementById("contentPlatform").value,
+  status:document.getElementById("contentStatus").value,
+  link:document.getElementById("contentLink").value,
+  notes:document.getElementById("contentNotes").value
+ });
+ saveData();
+ document.getElementById("contentTitle").value="";
+}
+function removeRecord(type,id){
+ if(!confirm("Delete this record?"))return;
+ data[type]=data[type].filter(x=>x.id!==id);
+ saveData();
+}
+function render(){
+ document.getElementById("totalBookings").textContent=data.bookings.length;
+ document.getElementById("pendingBookings").textContent=
+ data.bookings.filter(x=>["Pending","Contacted","Negotiation"].includes(x.status)).length;
+ document.getElementById("confirmedBookings").textContent=
+ data.bookings.filter(x=>["Confirmed","Completed"].includes(x.status)).length;
+ document.getElementById("totalValue").textContent=
+ money(data.bookings.reduce((s,x)=>s+Number(x.total||0),0));
+
+ document.getElementById("bookingRows").innerHTML=data.bookings.map(x=>
+ `<tr>
+ <td>${safe(x.client)}<br>${safe(x.phone)}</td>
+ <td>${safe(x.town)}, ${safe(x.region)}</td>
+ <td>${safe(x.date||"-")}</td>
+ <td>${x.distance} km</td>
+ <td>${money(x.total)}</td>
+ <td>${safe(x.status)}</td>
+ <td><button class="btn red" onclick="removeRecord('bookings',${x.id})">Delete</button></td>
+ </tr>`).join("");
+
+ document.getElementById("contentRows").innerHTML=data.content.map(x=>
+ `<tr>
+ <td>${safe(x.title)}</td>
+ <td>${safe(x.type)}</td>
+ <td>${safe(x.date||"-")}</td>
+ <td>${safe(x.platform)}</td>
+ <td>${safe(x.status)}</td>
+ <td><button class="btn red" onclick="removeRecord('content',${x.id})">Delete</button></td>
+ </tr>`).join("");
+}
+function exportBackup(){
+ const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+ const a=document.createElement("a");
+ a.href=URL.createObjectURL(blob);
+ a.download="senga-command-centre-backup.json";
+ a.click();
+ URL.revokeObjectURL(a.href);
+}
+function importBackup(e){
+ const file=e.target.files[0];
+ if(!file)return;
+ const reader=new FileReader();
+ reader.onload=()=>{
+  try{
+   const incoming=JSON.parse(reader.result);
+   if(!Array.isArray(incoming.bookings)||!Array.isArray(incoming.content))throw Error();
+   if(!confirm("Replace existing records with this backup?"))return;
+   data=incoming;saveData();alert("Backup imported.");
+  }catch(err){alert("Invalid backup file.");}
+ };
+ reader.readAsText(file);
+}
+function clearRecords(){
+ if(!confirm("Permanently delete all local records?"))return;
+ data={bookings:[],content:[]};
+ saveData();
+}
+async function sharePage(){
+ try{
+  if(navigator.share){
+   await navigator.share({
+    title:"Senga Command Centre",
+    text:"Senga Comedy and Music — National Bookings 360",
+    url:location.href
+   });
+  }else{
+   await navigator.clipboard.writeText(location.href);
+   alert("Link copied.");
+  }
+ }catch(e){}
+}
+init();
+</script>
 </body>
 </html>
